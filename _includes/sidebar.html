@@ -1,0 +1,125 @@
+<!--
+<style>
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+div.gallery:hover {
+    border: 1px solid #777;
+}
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+</style>
+-->
+
+<div class="col-box col-box-author">
+  <!--
+  <img class="avatar" src="{{ site.avatar }}" alt="{{ site.author }}">
+  <div class="col-box-title name">{{ site.author }}</div>
+  -->
+  <!--
+  <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="yunho0130"><a class="LI-simple-link" href='https://kr.linkedin.com/in/yunho0130?trk=profile-badge'>Yunho Maeng</a></div>
+  -->
+  <!-- Profile Image -->
+<img src="https://avatars3.githubusercontent.com/u/42957419?s=460&v=4">
+    
+  <p>{{ site.profile }}</p>
+    
+  <p class="contact">
+    {% if site.twitter_username %}
+    <a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>
+    {% endif %}
+    {% if site.email %}
+    <a href="mailto:{{ site.email }}">Email</a>
+    {% endif %}
+    <a href="https://www.facebook.com/hong6875">Facebook</a>
+    <a href="https://www.linkedin.com/in/jaehong-saw-99831b171/">Linkedin</a>
+    {% if site.github_username %}
+  </p>
+    
+<!--
+    <a href="https://www.linkedin.com/in/jaehong-saw-99831b171/">Linkedin</a>
+    {% if site.github_username %}
+    <a href="https://github.com/{{ site.github_username }}">GitHub</a>
+    {% endif %}
+    -->
+
+<!-- col-box-line -->
+<!--
+<div class="gallery">
+  <a target="_blank" href="fjords.jpg">
+    <img src="fjords.jpg" alt="Fjords" width="150" height="200">
+  </a>
+  <div class="desc">222Add a description of the image here</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="forest.jpg">
+    <img src="forest.jpg" alt="Forest" width="150" height="200">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+</body>
+</html> 
+  </p>
+</div>
+<br>
+-->
+<!-- col-box-line -->
+
+<div class="col-box">
+
+  <div class="col-box-title">Newest Posts</div>
+  <ul class="post-list">
+    {% for post in site.posts limit:5 %}
+      <li><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="col-box post-toc hide">
+  <div class="col-box-title">Table of contents</div>
+</div>
+
+    
+    
+    <!-- weather widget start -->
+    
+    <a target="_blank" href="https://www.booked.net/weather/seoul-18406">
+        <img src="https://w.bookcdn.com/weather/picture/4_18406_1_1_137AE9_268_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=2&domid=w209&anc_id=98394"  alt="booked.net"/> 
+    </a>
+    
+    <!--
+    <table cellpadding=10 cellspacing=10 width=270 style="border:solid 1px #2b2b2b;font-family:Verdana;font-size:12px;background-color:#514d4d"> 
+        <tr> 
+            <td><table width=100% cellpadding=100 cellspacing=100>
+                <tr>
+                    <td width=8 height=30 background="https://rp5.ru/informer/htmlinfa/topshl.png"  bgcolor=#2b2b2b>  
+                    </td> 
+                    <td width=* align=center background="https://rp5.ru/informer/htmlinfa/topsh.png" bgcolor=#2b2b2b> 
+                        <a style="color:#ffffff; font-family:Verdana;font-size: 16px;" href="https://rp5.ru/12514/ko"> 
+                            <b>서울특별시</b> 
+                        </a> 
+                    </td> 
+                    <td width=8 height=30 background="https://rp5.ru/informer/htmlinfa/topshr.png" bgcolor=#2b2b2b>  
+                    </td> 
+                </tr> 
+                </table> 
+            </td> 
+        </tr> 
+        <tr> 
+            <td valign=top style="padding:0;"> 
+                <iframe src="https://rp5.ru/htmla.php?id=12514&lang=ko&um=00000&bg=%23514d4d&ft=%23ffffff&fc=%232b2b2b&c=%23ffffff&f=Verdana&s=12&sc=3" width=100% height=160 frameborder=0 scrolling=no style="margin:0;"> 
+                </iframe> 
+            </td> 
+        </tr> 
+</table> 
+--> 
+<!-- weather widget end --> 
